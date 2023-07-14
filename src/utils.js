@@ -1,1 +1,1 @@
-export const backendUrl = process.env.REACT_APP_BACKEND;
+export const backendUrl = "https://pdfmanager-production-4fac.up.railway.app/";
