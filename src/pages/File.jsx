@@ -125,7 +125,7 @@ function File(props) {
         toast.error(err?.response?.data)
       }
     },[accessToken, id])
-    const commentDude = async () => {
+    const commentDude = async (callback) => {
       try{
         const res = await axios.post(backendUrl + `dashboard/file/${id}/${0}/`, {
           content: description
@@ -133,6 +133,7 @@ function File(props) {
           Authorization: `Bearer ${accessToken}`
         }})
         toast.success(res?.data)
+        callback("")
         fetchComments()
       }catch(err){
         toast.error(err?.response?.data)

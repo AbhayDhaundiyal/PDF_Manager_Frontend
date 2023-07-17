@@ -22,7 +22,7 @@ function Comment({ placeholder, content, setContent, commentDude }) {
                 //onBlur={(newContent) => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
                 onChange={(newContent) => setContent(newContent)}
             />
-            <Button onClick={() => {commentDude()}} sx={{my: 4}} variant='contained' color='primary'>Comment</Button>
+            <Button onClick={() => {commentDude(setContent)}} sx={{my: 4}} variant='contained' color='primary'>Comment</Button>
             </>
     );
 }
